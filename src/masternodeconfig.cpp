@@ -45,7 +45,7 @@ bool CMasternodeConfig::read(std::string& strErr) {
             }
             CBitcoinAddress address(donationAddress);
             if (!address.IsValid()) {
-                strErr = "Invalid Mobicoin address in masternode.conf line: " + line;
+                strErr = "Invalid Unpay address in masternode.conf line: " + line;
                 streamConfig.close();
                 return false;
             }

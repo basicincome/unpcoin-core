@@ -1,2 +1,2 @@
-usr/local/bin/mobicoind usr/bin
-usr/local/bin/mobicoin-cli usr/bin
+usr/local/bin/unpayd usr/bin
+usr/local/bin/unpay-cli usr/bin

@@ -1,8 +1,8 @@
 [main]
 host = https://www.transifex.com
 
-[mobicoin.tx]
-file_filter = src/qt/locale/mobicoin_<lang>.ts
-source_file = src/qt/locale/mobicoin_en.ts
+[unpay.tx]
+file_filter = src/qt/locale/unpay_<lang>.ts
+source_file = src/qt/locale/unpay_en.ts
 source_lang = en
 type = QT

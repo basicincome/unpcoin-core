@@ -65,7 +65,7 @@ public slots:
     void showConsole();
     /** Switch to network tab and show */
     void showNetwork();
-    /** Open external (default) editor with mobicoin.conf */
+    /** Open external (default) editor with unpay.conf */
     void showConfEditor();	
     /** Show folder with wallet backups in default browser */
     void showBackups();

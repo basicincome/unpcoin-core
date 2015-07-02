@@ -2,9 +2,9 @@ include $(top_srcdir)/src/Makefile.include
 
 AM_CPPFLAGS += -I$(top_srcdir)/src
 
-bin_PROGRAMS = test_mobicoin
+bin_PROGRAMS = test_unpay
 
-TESTS = test_mobicoin
+TESTS = test_unpay
 
 JSON_TEST_FILES = \
   data/script_valid.json \
@@ -22,16 +22,16 @@ RAW_TEST_FILES = data/alertTests.raw
 
 BUILT_SOURCES = $(JSON_TEST_FILES:.json=.json.h) $(RAW_TEST_FILES:.raw=.raw.h)
 
-# test_mobicoin binary #
-test_mobicoin_CPPFLAGS = $(AM_CPPFLAGS) $(TESTDEFS)
-test_mobicoin_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+# test_unpay binary #
+test_unpay_CPPFLAGS = $(AM_CPPFLAGS) $(TESTDEFS)
+test_unpay_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(BOOST_UNIT_TEST_FRAMEWORK_LIB)
 if ENABLE_WALLET
-test_mobicoin_LDADD += $(LIBBITCOIN_WALLET)
+test_unpay_LDADD += $(LIBBITCOIN_WALLET)
 endif
-test_mobicoin_LDADD += $(BDB_LIBS)
+test_unpay_LDADD += $(BDB_LIBS)
 
-test_mobicoin_SOURCES = \
+test_unpay_SOURCES = \
   alert_tests.cpp \
   allocator_tests.cpp \
   base32_tests.cpp \
@@ -57,7 +57,7 @@ test_mobicoin_SOURCES = \
   script_tests.cpp \
   serialize_tests.cpp \
   sigopcount_tests.cpp \
-  test_mobicoin.cpp \
+  test_unpay.cpp \
   transaction_tests.cpp \
   uint256_tests.cpp \
   util_tests.cpp \
@@ -66,12 +66,12 @@ test_mobicoin_SOURCES = \
   $(JSON_TEST_FILES) $(RAW_TEST_FILES)
 
 if ENABLE_WALLET
-test_mobicoin_SOURCES += \
+test_unpay_SOURCES += \
    accounting_tests.cpp \
    wallet_tests.cpp \
    rpc_wallet_tests.cpp
 endif
 
-nodist_test_mobicoin_SOURCES = $(BUILT_SOURCES)
+nodist_test_unpay_SOURCES = $(BUILT_SOURCES)
 
 CLEANFILES = *.gcda *.gcno $(BUILT_SOURCES)

@@ -1,6 +1,6 @@
-usr/local/bin/mobicoin-qt usr/bin
-share/pixmaps/mobicoin32.xpm usr/share/pixmaps
-share/pixmaps/mobicoin16.xpm usr/share/pixmaps
-share/pixmaps/mobicoin128.png usr/share/pixmaps
-debian/mobicoin-qt.desktop usr/share/applications
-debian/mobicoin-qt.protocol usr/share/kde4/services/
+usr/local/bin/unpay-qt usr/bin
+share/pixmaps/unpay32.xpm usr/share/pixmaps
+share/pixmaps/unpay16.xpm usr/share/pixmaps
+share/pixmaps/unpay128.png usr/share/pixmaps
+debian/unpay-qt.desktop usr/share/applications
+debian/unpay-qt.protocol usr/share/kde4/services/

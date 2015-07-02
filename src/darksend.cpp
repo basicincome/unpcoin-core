@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015 The Mobicoin developers
+// Copyright (c) 2014-2015 The Unpay developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -39,9 +39,9 @@ CActiveMasternode activeMasternode;
 int RequestedMasterNodeList = 0;
 
 /* *** BEGIN DARKSEND MAGIC - MCP **********
-    Copyright (c) 2014-2015, Mobicoin Developers
-        eduffield - evan@mobicoinpay.io
-        udjinm6   - udjinm6@mobicoinpay.io
+    Copyright (c) 2014-2015, Unpay Developers
+        eduffield - evan@unpaypay.io
+        udjinm6   - udjinm6@unpaypay.io
 */
 
 void CDarksendPool::ProcessMessageDarksend(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
@@ -800,7 +800,7 @@ void CDarksendPool::ChargeRandomFees(){
 
                 Being that Darksend has "no fees" we need to have some kind of cost associated
                 with using it to stop abuse. Otherwise it could serve as an attack vector and
-                allow endless transaction that would bloat Mobicoin and make it unusable. To
+                allow endless transaction that would bloat Unpay and make it unusable. To
                 stop these kinds of attacks 1 in 10 successful transactions are charged. This
                 adds up to a cost of 0.001DRK per transaction on average.
             */
@@ -2194,7 +2194,7 @@ void ThreadCheckDarkSendPool()
     if(fLiteMode) return; //disable all Darksend/Masternode related functionality
 
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("mobicoin-darksend");
+    RenameThread("unpay-darksend");
 
     unsigned int c = 0;
     std::string errorMessage;

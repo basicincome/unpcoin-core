@@ -72,12 +72,12 @@ MSYS shell:
 	mkdir miniupnpc
 	cp *.h miniupnpc/
 
-Mobicoin
+Unpay
 -------
 MSYS shell:
 
-	cd \mobicoin
+	cd \unpay
 	sh autogen.sh
 	sh configure
 	mingw32-make
-	strip mobicoind.exe
+	strip unpayd.exe

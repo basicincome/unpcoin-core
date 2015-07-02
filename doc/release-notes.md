@@ -1,19 +1,19 @@
-Mobicoin Core 0.11
+Unpay Core 0.11
 ==================
 
-Mobicoin Core tree 0.11.x release notes can be found here:
+Unpay Core tree 0.11.x release notes can be found here:
 
-- [v0.11.2](release-notes/mobicoin/release-notes-0.11.2.md) released Mar/??/2015
-- [v0.11.1](release-notes/mobicoin/release-notes-0.11.1.md) released Feb/10/2015
-- [v0.11.0](release-notes/mobicoin/release-notes-0.11.0.md) released Jan/15/2015
+- [v0.11.2](release-notes/unpay/release-notes-0.11.2.md) released Mar/??/2015
+- [v0.11.1](release-notes/unpay/release-notes-0.11.1.md) released Feb/10/2015
+- [v0.11.0](release-notes/unpay/release-notes-0.11.0.md) released Jan/15/2015
 
-Mobicoin Core tree 0.11.x is a fork of Bitcoin Core tree 0.9.
+Unpay Core tree 0.11.x is a fork of Bitcoin Core tree 0.9.
 
 
 Older releases
 --------------
 
-Mobicoin was previously known as Darkcoin.
+Unpay was previously known as Darkcoin.
 
 Darkcoin tree 0.8.x was a fork of Litecoin tree 0.8, original name was XCoin
 which was first released on Jan/18/2014.
@@ -26,5 +26,5 @@ which was released open source on Sep/25/2014.
 
 These release are considered obsolete. Old changelogs can be found here:
 
-- [v0.10.x](release-notes/mobicoin/release-notes-0.10.0.md) released Sep/25/2014
-- [v0.9.x](release-notes/mobicoin/release-notes-0.9.0.md) released Mar/13/2014
+- [v0.10.x](release-notes/unpay/release-notes-0.10.0.md) released Sep/25/2014
+- [v0.9.x](release-notes/unpay/release-notes-0.9.0.md) released Mar/13/2014

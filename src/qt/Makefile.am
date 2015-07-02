@@ -5,41 +5,41 @@ AM_CPPFLAGS += -I$(top_srcdir)/src \
   -I$(top_builddir)/src/qt/forms \
   $(PROTOBUF_CFLAGS) \
   $(QR_CFLAGS)
-bin_PROGRAMS = mobicoin-qt
-noinst_LIBRARIES = libmobicoinqt.a
+bin_PROGRAMS = unpay-qt
+noinst_LIBRARIES = libunpayqt.a
 SUBDIRS = . $(BUILD_TEST_QT)
 DIST_SUBDIRS = . test
 
-# mobicoin qt core #
+# unpay qt core #
 QT_TS = \
-  locale/mobicoin_bar.ts \
-  locale/mobicoin_bg.ts \
-  locale/mobicoin_ca.ts \
-  locale/mobicoin_cmn.ts \
-  locale/mobicoin_cs.ts \
-  locale/mobicoin_da.ts \
-  locale/mobicoin_de.ts \
-  locale/mobicoin_el.ts \
-  locale/mobicoin_en.ts \
-  locale/mobicoin_eo.ts \
-  locale/mobicoin_es.ts \
-  locale/mobicoin_fi.ts \
-  locale/mobicoin_fr.ts \
-  locale/mobicoin_hu_HU.ts \
-  locale/mobicoin_it.ts \
-  locale/mobicoin_lv_LV.ts \
-  locale/mobicoin_nb.ts \
-  locale/mobicoin_nl.ts \
-  locale/mobicoin_pl.ts \
-  locale/mobicoin_pt.ts \
-  locale/mobicoin_pt_BR.ts \
-  locale/mobicoin_ru.ts \
-  locale/mobicoin_sk.ts \
-  locale/mobicoin_sv.ts \
-  locale/mobicoin_tr.ts \
-  locale/mobicoin_vi.ts \
-  locale/mobicoin_zh_CN.ts \
-  locale/mobicoin_zh_HK.ts
+  locale/unpay_bar.ts \
+  locale/unpay_bg.ts \
+  locale/unpay_ca.ts \
+  locale/unpay_cmn.ts \
+  locale/unpay_cs.ts \
+  locale/unpay_da.ts \
+  locale/unpay_de.ts \
+  locale/unpay_el.ts \
+  locale/unpay_en.ts \
+  locale/unpay_eo.ts \
+  locale/unpay_es.ts \
+  locale/unpay_fi.ts \
+  locale/unpay_fr.ts \
+  locale/unpay_hu_HU.ts \
+  locale/unpay_it.ts \
+  locale/unpay_lv_LV.ts \
+  locale/unpay_nb.ts \
+  locale/unpay_nl.ts \
+  locale/unpay_pl.ts \
+  locale/unpay_pt.ts \
+  locale/unpay_pt_BR.ts \
+  locale/unpay_ru.ts \
+  locale/unpay_sk.ts \
+  locale/unpay_sv.ts \
+  locale/unpay_tr.ts \
+  locale/unpay_vi.ts \
+  locale/unpay_zh_CN.ts \
+  locale/unpay_zh_HK.ts
 
 QT_FORMS_UI = \
   forms/aboutdialog.ui \
@@ -112,13 +112,13 @@ BITCOIN_MM = \
   macnotificationhandler.mm
 
 QT_MOC = \
-  mobicoin.moc \
+  unpay.moc \
   intro.moc \
   overviewpage.moc \
   rpcconsole.moc
 
-QT_QRC_CPP = qrc_mobicoin.cpp
-QT_QRC = mobicoin.qrc
+QT_QRC_CPP = qrc_unpay.cpp
+QT_QRC = unpay.qrc
 
 PROTOBUF_CC = paymentrequest.pb.cc
 PROTOBUF_H = paymentrequest.pb.h
@@ -227,7 +227,7 @@ RES_ICONS = \
 
 
 BITCOIN_QT_CPP = \
-  mobicoin.cpp \
+  unpay.cpp \
   bitcoinaddressvalidator.cpp \
   bitcoinamountfield.cpp \
   bitcoingui.cpp \
@@ -284,7 +284,7 @@ RES_IMAGES = \
   res/images/about.png \
   res/images/splash.png \
   res/images/splash_testnet.png \
-  res/images/mobicoin_logo_horizontal.png \
+  res/images/unpay_logo_horizontal.png \
   res/images/drkblue_downArrow.png \
   res/images/drkblue_downArrow_small.png \
   res/images/drkblue_upArrow_small.png \
@@ -299,40 +299,40 @@ RES_CSS = \
   
 RES_MOVIES = $(wildcard res/movies/spinner-*.png)
 
-UNP_RC = res/mobicoin-qt-res.rc
+UNP_RC = res/unpay-qt-res.rc
 
-libmobicoinqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+libunpayqt_a_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms $(QT_DBUS_INCLUDES)
-libmobicoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
+libunpayqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
   $(QT_QRC) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS)
 
-nodist_libmobicoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
+nodist_libunpayqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP)
 
-BUILT_SOURCES = $(nodist_libmobicoinqt_a_SOURCES)
+BUILT_SOURCES = $(nodist_libunpayqt_a_SOURCES)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
 $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
-# mobicoin-qt binary #
-mobicoin_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
+# unpay-qt binary #
+unpay_qt_CPPFLAGS = $(AM_CPPFLAGS) $(QT_INCLUDES) \
   -I$(top_srcdir)/src/qt/forms
-mobicoin_qt_SOURCES = mobicoin.cpp
+unpay_qt_SOURCES = unpay.cpp
 if TARGET_DARWIN
-  mobicoin_qt_SOURCES += $(BITCOIN_MM)
+  unpay_qt_SOURCES += $(BITCOIN_MM)
 endif
 if TARGET_WINDOWS
-  mobicoin_qt_SOURCES += $(UNP_RC)
+  unpay_qt_SOURCES += $(UNP_RC)
 endif
-mobicoin_qt_LDADD = libmobicoinqt.a $(LIBBITCOIN_SERVER)
+unpay_qt_LDADD = libunpayqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-mobicoin_qt_LDADD += $(LIBBITCOIN_WALLET)
+unpay_qt_LDADD += $(LIBBITCOIN_WALLET)
 endif
-mobicoin_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
+unpay_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBLEVELDB) $(LIBMEMENV) \
   $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS)
-mobicoin_qt_LDFLAGS = $(QT_LDFLAGS)
+unpay_qt_LDFLAGS = $(QT_LDFLAGS)
 
 # forms/foo.h -> forms/ui_foo.h
 QT_FORMS_H=$(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
@@ -343,15 +343,15 @@ QT_QM=$(QT_TS:.ts=.qm)
 .PHONY: FORCE
 .SECONDARY: $(QT_QM)
 
-mobicoinstrings.cpp: FORCE
-	$(MAKE) -C $(top_srcdir)/src qt/mobicoinstrings.cpp
+unpaystrings.cpp: FORCE
+	$(MAKE) -C $(top_srcdir)/src qt/unpaystrings.cpp
 
-translate: mobicoinstrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
+translate: unpaystrings.cpp $(QT_FORMS_UI) $(QT_FORMS_UI) $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(BITCOIN_MM)
 	@test -n $(LUPDATE) || echo "lupdate is required for updating translations"
-	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/mobicoin_en.ts
+	@QT_SELECT=$(QT_SELECT) $(LUPDATE) $^ -locations relative -no-obsolete -ts locale/unpay_en.ts
 
 $(QT_QRC_CPP): $(QT_QRC) $(QT_QM) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(RES_CSS) $(PROTOBUF_H)
-	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name mobicoin -o $(abs_builddir)/$@ $< || \
+	@cd $(abs_srcdir); test -f $(RCC) && QT_SELECT=$(QT_SELECT) $(RCC) -name unpay -o $(abs_builddir)/$@ $< || \
 	  echo error: could not build $@
 	$(SED) -e '/^\*\*.*Created:/d' $@ > $@.n && mv $@{.n,}
 	$(SED) -e '/^\*\*.*by:/d' $@  > $@.n && mv $@{.n,}

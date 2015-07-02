@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Mobicoin
-Comment=Mobicoin P2P Cryptocurrency
-Comment[fr]=Mobicoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Mobicoin, eşten eşe kriptografik sanal para birimi
-Exec=mobicoin-qt %u
+Name=Unpay
+Comment=Unpay P2P Cryptocurrency
+Comment[fr]=Unpay, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Unpay, eşten eşe kriptografik sanal para birimi
+Exec=unpay-qt %u
 Terminal=false
 Type=Application
-Icon=mobicoin128
-MimeType=x-scheme-handler/mobicoin;
+Icon=unpay128
+MimeType=x-scheme-handler/unpay;
 Categories=Office;Finance;

@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Mobicoin developers
+// Copyright (c) 2014-2015 The Unpay developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -68,10 +68,10 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
-            case MCP: return QString("Mobicoin");
-            case mMCP: return QString("Milli-Mobicoin (1 / 1,000)");
-            case uMCP: return QString("Micro-Mobicoin (1 / 1,000,000)");
-            case duffs: return QString("Ten Nano-Mobicoin (1 / 100,000,000)");
+            case MCP: return QString("Unpay");
+            case mMCP: return QString("Milli-Unpay (1 / 1,000)");
+            case uMCP: return QString("Micro-Unpay (1 / 1,000,000)");
+            case duffs: return QString("Ten Nano-Unpay (1 / 100,000,000)");
             default: return QString("???");
         }
     }

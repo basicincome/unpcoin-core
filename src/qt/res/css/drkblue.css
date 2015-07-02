@@ -696,16 +696,16 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Mobicoin Dialog */
+/* About Unpay Dialog */
 QDialog#AboutDialog {
 background-color:#F8F6F6;
 }
 
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Mobicoin Contents */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Unpay Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Mobicoin text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Unpay text */
 margin-right:10px;
 }
 
@@ -996,7 +996,7 @@ QWidget .QFrame#frame_2 { /* Transactions Widget */
 min-width:410px;
 margin-right:20px;
 margin-left:0;
-background-image: url(':/images/mobicoin_logo_horizontal');
+background-image: url(':/images/unpay_logo_horizontal');
 background-repeat:none;
 }
 

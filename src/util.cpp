@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2015 The Mobicoin developers
+// Copyright (c) 2014-2015 The Unpay developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -93,7 +93,7 @@ namespace boost {
 
 using namespace std;
 
-//Mobicoin only features
+//Unpay only features
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
 string strMasterNodeAddr = "";
@@ -993,7 +993,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "mobicoin";
+    const char* pszModule = "unpay";
 #endif
     if (pex)
         return strprintf(
@@ -1020,13 +1020,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Mobicoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Mobicoin
-    // Mac: ~/Library/Application Support/Mobicoin
-    // Unix: ~/.mobicoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Unpay
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Unpay
+    // Mac: ~/Library/Application Support/Unpay
+    // Unix: ~/.unpay
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Mobicoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Unpay";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1038,10 +1038,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "Mobicoin";
+    return pathRet / "Unpay";
 #else
     // Unix
-    return pathRet / ".mobicoin";
+    return pathRet / ".unpay";
 #endif
 #endif
 }
@@ -1090,7 +1090,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "mobicoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "unpay.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1107,7 +1107,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good()){
-        // Create empty mobicoin.conf if it does not excist
+        // Create empty unpay.conf if it does not excist
         FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
         if (configFile != NULL)
             fclose(configFile);
@@ -1119,7 +1119,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override mobicoin.conf
+        // Don't overwrite existing settings so command line settings override unpay.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1135,7 +1135,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "mobicoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "unpayd.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1368,7 +1368,7 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Mobicoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Unpay will not work properly.");
                     strMiscWarning = strMessage;
                     LogPrintf("*** %s\n", strMessage);
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);
