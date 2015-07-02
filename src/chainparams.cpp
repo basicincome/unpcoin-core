@@ -89,7 +89,7 @@ public:
         //vSeeds.push_back(CDNSSeedData("masternode.io", "dnsseed.masternode.io"));
         //vSeeds.push_back(CDNSSeedData("unpaypay.io", "dnsseed.unpaypay.io"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = list_of( 50);                    // Unpay addresses start with 'X'
+        base58Prefixes[PUBKEY_ADDRESS] = list_of(68);                    // Unpay addresses start with 'X'
         base58Prefixes[SCRIPT_ADDRESS] = list_of( 16);                    // Unpay script addresses start with '7'
         base58Prefixes[SECRET_KEY] =     list_of(204);                    // Unpay private keys start with '7' or 'X'
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x02)(0xFE)(0x52)(0xF8); // Unpay BIP32 pubkeys start with 'drkv'
