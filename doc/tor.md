@@ -1,4 +1,4 @@
-TOR SUPPORT IN MCP
+TOR SUPPORT IN UNP
 =======================
 
 It is possible to run Unpay as a Tor hidden service, and connect to such services.

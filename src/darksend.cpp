@@ -38,7 +38,7 @@ CActiveMasternode activeMasternode;
 // Count peers we've requested the list from
 int RequestedMasterNodeList = 0;
 
-/* *** BEGIN DARKSEND MAGIC - MCP **********
+/* *** BEGIN DARKSEND MAGIC - UNP **********
     Copyright (c) 2014-2015, Unpay Developers
         eduffield - evan@unpaypay.io
         udjinm6   - udjinm6@unpaypay.io
@@ -1484,7 +1484,7 @@ bool CDarksendPool::DoAutomaticDenominating(bool fDryRun, bool ready)
         if(sessionTotalValue > nBalanceNeedsAnonymized) sessionTotalValue = nBalanceNeedsAnonymized;
 
         double fDarkcoinSubmitted = (sessionTotalValue / CENT);
-        LogPrintf("Submitting Darksend for %f MCP CENT - sessionTotalValue %d\n", fDarkcoinSubmitted, sessionTotalValue);
+        LogPrintf("Submitting Darksend for %f UNP CENT - sessionTotalValue %d\n", fDarkcoinSubmitted, sessionTotalValue);
 
         if(pwalletMain->GetDenominatedBalance(true, true) > 0){ //get denominated unconfirmed inputs
             LogPrintf("DoAutomaticDenominating -- Found unconfirmed denominated outputs, will wait till they confirm to continue.\n");

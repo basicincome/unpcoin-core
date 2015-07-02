@@ -275,7 +275,7 @@ Ez a termék az OpenSSL Project által lett kifejlesztve az OpenSSL Toolkit (htt
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="113"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MCP&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UNP&lt;/b&gt;!</source>
         <translation>Figyelem! Ha kódolod a tárcád és elveszíted a jelszót, akkor az &lt;b&gt;ÖSSZES UNPOD ELVESZIK&lt;b/&gt;</translation>
     </message>
     <message>
@@ -1135,12 +1135,12 @@ Cím: %4
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="78"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 MCP</source>
+        <source>Use 2 separate masternodes to mix funds up to 1000 UNP</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="91"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 MCP</source>
+        <source>Use 8 separate masternodes to mix funds up to 1000 UNP</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1150,17 +1150,17 @@ Cím: %4
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="117"/>
-        <source>This option is the quickest and will cost about ~0.025 MCP to anonymize 1000 MCP</source>
+        <source>This option is the quickest and will cost about ~0.025 UNP to anonymize 1000 UNP</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="130"/>
-        <source>This option is moderately fast and will cost about 0.05 MCP to anonymize 1000 MCP</source>
+        <source>This option is moderately fast and will cost about 0.05 UNP to anonymize 1000 UNP</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="156"/>
-        <source>0.1 MCP per 1000 MCP you anonymize.</source>
+        <source>0.1 UNP per 1000 UNP you anonymize.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1810,8 +1810,8 @@ https://www.transifex.com/projects/p/unpay/</source>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="349"/>
-        <source>0 MCP</source>
-        <translation>0 MCP</translation>
+        <source>0 UNP</source>
+        <translation>0 UNP</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="356"/>
@@ -1820,8 +1820,8 @@ https://www.transifex.com/projects/p/unpay/</source>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="363"/>
-        <source>0 MCP / 0 Rounds</source>
-        <translation>0 MCP / 0 kör</translation>
+        <source>0 UNP / 0 Rounds</source>
+        <translation>0 UNP / 0 kör</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="370"/>
@@ -3871,7 +3871,7 @@ https://www.transifex.com/projects/p/unpay/</source>
     </message>
     <message numerus="yes">
         <location filename="../walletmodel.cpp" line="271"/>
-        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %n MCP.</source>
+        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %n UNP.</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
 </context>
@@ -4132,7 +4132,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Unpay Alert&quot; admin@foo.co
     </message>
     <message>
         <location filename="../unpaystrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 MCP.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 UNP.</source>
         <translation type="unfinished"/>
     </message>
     <message>

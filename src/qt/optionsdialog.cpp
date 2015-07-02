@@ -71,8 +71,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     /* Display elements init */
     
     /* Theme selector */
-    ui->theme->addItem(QString("MCP-blue"), QVariant("drkblue"));
-    ui->theme->addItem(QString("MCP-traditional"), QVariant("trad"));
+    ui->theme->addItem(QString("UNP-blue"), QVariant("drkblue"));
+    ui->theme->addItem(QString("UNP-traditional"), QVariant("trad"));
 
     
     /* Language selector */

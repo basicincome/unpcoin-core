@@ -276,8 +276,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="113"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MCP&lt;/b&gt;!</source>
-        <translation>Attenzione: se crittografi il tuo portafoglio e perdi la tua passphrase, PERDERAI TUTTI I TUOI MCP!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UNP&lt;/b&gt;!</source>
+        <translation>Attenzione: se crittografi il tuo portafoglio e perdi la tua passphrase, PERDERAI TUTTI I TUOI UNP!</translation>
     </message>
     <message>
         <location filename="../askpassphrasedialog.cpp" line="113"/>
@@ -1137,13 +1137,13 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="78"/>
-        <source>Use 2 separate masternodes to mix funds up to 1000 MCP</source>
-        <translation>Usa 2 separati masternode per mischiare fino al 1000 MCP</translation>
+        <source>Use 2 separate masternodes to mix funds up to 1000 UNP</source>
+        <translation>Usa 2 separati masternode per mischiare fino al 1000 UNP</translation>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="91"/>
-        <source>Use 8 separate masternodes to mix funds up to 1000 MCP</source>
-        <translation>Usa 8 separati masternode per mischiare fino al 1000 MCP</translation>
+        <source>Use 8 separate masternodes to mix funds up to 1000 UNP</source>
+        <translation>Usa 8 separati masternode per mischiare fino al 1000 UNP</translation>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="104"/>
@@ -1152,17 +1152,17 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="117"/>
-        <source>This option is the quickest and will cost about ~0.025 MCP to anonymize 1000 MCP</source>
+        <source>This option is the quickest and will cost about ~0.025 UNP to anonymize 1000 UNP</source>
         <translation>Questa opzione è la più veloce e ti costerà ~0.025DRK circa per anonimizzare 1000DRK</translation>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="130"/>
-        <source>This option is moderately fast and will cost about 0.05 MCP to anonymize 1000 MCP</source>
+        <source>This option is moderately fast and will cost about 0.05 UNP to anonymize 1000 UNP</source>
         <translation>Questa opzione è moderatamente veloce e costerà 0.05DRK circa per anonimizzare 1000DRK</translation>
     </message>
     <message>
         <location filename="../forms/darksendconfig.ui" line="156"/>
-        <source>0.1 MCP per 1000 MCP you anonymize.</source>
+        <source>0.1 UNP per 1000 UNP you anonymize.</source>
         <translation>0.1DRK ogni 1000DRK anonimizzati.</translation>
     </message>
     <message>
@@ -1812,8 +1812,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="349"/>
-        <source>0 MCP</source>
-        <translation>0 MCP</translation>
+        <source>0 UNP</source>
+        <translation>0 UNP</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="356"/>
@@ -1822,8 +1822,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="363"/>
-        <source>0 MCP / 0 Rounds</source>
-        <translation>0 MCP / 0 Round</translation>
+        <source>0 UNP / 0 Rounds</source>
+        <translation>0 UNP / 0 Round</translation>
     </message>
     <message>
         <location filename="../forms/overviewpage.ui" line="370"/>
@@ -3873,8 +3873,8 @@ Più URL vengono separati da una barra verticale |.</translation>
     </message>
     <message numerus="yes">
         <location filename="../walletmodel.cpp" line="271"/>
-        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %n MCP.</source>
-        <translation><numerusform>InstantX non supporta ancora l&apos;invio di somme così alte. Le transazioni sono attualmente limitate al %n MCP.</numerusform><numerusform>InstantX non supporta ancora l&apos;invio di somme così alte. Le transazioni sono attualmente limitate al %n MCP.</numerusform></translation>
+        <source>InstantX doesn&apos;t support sending values that high yet. Transactions are currently limited to %n UNP.</source>
+        <translation><numerusform>InstantX non supporta ancora l&apos;invio di somme così alte. Le transazioni sono attualmente limitate al %n UNP.</numerusform><numerusform>InstantX non supporta ancora l&apos;invio di somme così alte. Le transazioni sono attualmente limitate al %n UNP.</numerusform></translation>
     </message>
 </context>
 <context>
@@ -4144,7 +4144,7 @@ ad esempio: alertnotify=echo %%s | mail -s &quot;Unpay Alert&quot; admin@foo.com
     </message>
     <message>
         <location filename="../unpaystrings.cpp" line="138"/>
-        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 MCP.</source>
+        <source>Unable to locate enough Darksend non-denominated funds for this transaction that are not equal 1000 UNP.</source>
         <translation type="unfinished"/>
     </message>
     <message>
