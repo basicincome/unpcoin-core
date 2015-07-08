@@ -15,10 +15,11 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
+    unitlist.append(kUNP);
     unitlist.append(UNP);
     unitlist.append(mUNP);
     unitlist.append(uUNP);
-    unitlist.append(duffs);
+    //unitlist.append(duffs);
     return unitlist;
 }
 
@@ -26,10 +27,10 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
+    case kUNP:
     case UNP:
     case mUNP:
     case uUNP:
-    case duffs:
         return true;
     default:
         return false;
@@ -42,10 +43,11 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
+            case kUNP: return QString::fromUtf8("kUNP");
             case UNP: return QString("UNP");
             case mUNP: return QString("mUNP");
             case uUNP: return QString::fromUtf8("μUNP");
-            case duffs: return QString::fromUtf8("duffs");
+            //case duffs: return QString::fromUtf8("duffs");
             default: return QString("???");
         }
     }
@@ -53,10 +55,11 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
+            case kUNP: return QString::fromUtf8("tkUNP");
             case UNP: return QString("tUNP");
             case mUNP: return QString("mtUNP");
             case uUNP: return QString::fromUtf8("μtUNP");
-            case duffs: return QString::fromUtf8("tduffs");
+            //case duffs: return QString::fromUtf8("tduffs");
             default: return QString("???");
         }
     }
@@ -68,10 +71,11 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
+            case kUNP: return QString("Killo-Unpay (1,000)");
             case UNP: return QString("Unpay");
             case mUNP: return QString("Milli-Unpay (1 / 1,000)");
             case uUNP: return QString("Micro-Unpay (1 / 1,000,000)");
-            case duffs: return QString("Ten Nano-Unpay (1 / 100,000,000)");
+            //case duffs: return QString("Ten Nano-Unpay (1 / 100,000,000)");
             default: return QString("???");
         }
     }
@@ -79,10 +83,11 @@ QString BitcoinUnits::description(int unit)
     {
         switch(unit)
         {
+            case kUNP: return QString("Killo-TestDashs (1,000)");
             case UNP: return QString("TestDashs");
             case mUNP: return QString("Milli-TestDash (1 / 1,000)");
             case uUNP: return QString("Micro-TestDash (1 / 1,000,000)");
-            case duffs: return QString("Ten Nano-TestDash (1 / 100,000,000)");
+            //case duffs: return QString("Ten Nano-TestDash (1 / 100,000,000)");
             default: return QString("???");
         }
     }
@@ -92,10 +97,10 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case UNP:  return 100000000;
-    case mUNP: return 100000;
-    case uUNP: return 100;
-    case duffs: return 1;
+    case kUNP: return 100000000;
+    case UNP:  return 100000;
+    case mUNP: return 100;
+    case uUNP: return 1;
     default:   return 100000000;
     }
 }
@@ -104,10 +109,10 @@ qint64 BitcoinUnits::maxAmount(int unit)
 {
     switch(unit)
     {
-    case UNP:   return Q_INT64_C(90000000000);
-    case mUNP:  return Q_INT64_C(90000000000000);
-    case uUNP:  return Q_INT64_C(90000000000000000);
-    case duffs: return Q_INT64_C(9000000000000000000);
+    case kUNP: return Q_INT64_C(90000000000);
+    case UNP:  return Q_INT64_C(90000000000000);
+    case mUNP: return Q_INT64_C(90000000000000000);
+    case uUNP: return Q_INT64_C(9000000000000000000);
     default:   return 0;
     }
 }
@@ -116,10 +121,10 @@ int BitcoinUnits::amountDigits(int unit)
 {
     switch(unit)
     {
-    case UNP: return 11;  //            90,000,000,000 (# digits, without commas)
-    case mUNP: return 14; //        90,000,000,000,000
-    case uUNP: return 17; //    90,000,000,000,000,000
-    case duffs: return 19;// 9,000,000,000,000,000,000
+    case kUNP: return 11; //           90,000,000,000 (# digits, without commas)
+    case UNP:  return 14; //       90,000,000,000,000
+    case mUNP: return 17; //   90,000,000,000,000,000
+    case uUNP: return 19; //9,000,000,000,000,000,000
     default: return 0;
     }
 }
@@ -128,10 +133,10 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case UNP: return 8;
-    case mUNP: return 5;
-    case uUNP: return 2;
-    case duffs: return 0;
+    case kUNP: return 8;
+    case UNP:  return 5;
+    case mUNP: return 2;
+    case uUNP: return 0;
     default: return 0;
     }
 }

@@ -26,10 +26,11 @@ public:
      */
     enum Unit
     {
+        kUNP,
         UNP,
         mUNP,
         uUNP,
-        duffs
+    //    duffs
     };
 
     //! @name Static API
